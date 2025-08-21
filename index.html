@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Moh222Salah </title>
+
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Mohamed Salah — CV" />
+  <meta property="og:description" content="Senior Web Developer — portfolio and CV." />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <!-- custom css link-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Ionicons for Modal -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 60px 0;
+            margin-bottom: 80px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        /* Portfolio Sections */
+        .portfolio-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .featured-project {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .featured-project .project-icon {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .project-category {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .featured-project .project-category {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .featured-project .project-description {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .project-highlights li {
+            position: relative;
+            padding: 8px 0;
+            padding-right: 25px;
+            color: #555;
+        }
+
+        .project-highlights li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .featured-project .project-highlights li {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .featured-project .project-highlights li::before {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .featured-project .tech-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-preview {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .preview-item {
+            width: 50px;
+            height: 50px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .preview-item:hover {
+            transform: scale(1.1);
+        }
+
+        .featured-project .preview-item {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-metrics {
+            margin-bottom: 25px;
+        }
+
+        .metrics-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .featured-project .metrics-title {
+            color: white;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .featured-project .metric {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .metric-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .featured-project .metric-value {
+            color: white;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .featured-project .metric-label {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .client-quote {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-right: 4px solid #667eea;
+        }
+
+        .featured-project .client-quote {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-right-color: white;
+        }
+
+        .quote-text {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .featured-project .quote-text {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .quote-author {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .featured-project .quote-author {
+            color: white;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .featured-project .project-link {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Modal Styles */
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            display: none;
+        }
+
+        .modal-container.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .testimonials-modal {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 20px;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            padding: 5px;
+        }
+
+        .modal-img-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .modal-avatar-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .modal-content {
+            text-align: center;
+        }
+
+        .modal-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .modal-content time {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-card {
+                padding: 20px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .project-preview {
+                gap: 10px;
+            }
+            
+            .preview-item {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+  <!-- #MAIN  -->
+  <main>
+
+    <!-- #SIDEBAR-->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/mr-ms.png" alt="mohamed salah" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="mohamed salah"> MOHAMED SALAH </h1>
+          <p class="title"> AI Design & Marketing Manager </p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:richard@example.com" class="contact-link"> moh222salah@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12133522795" class="contact-link">+2 (01113903070) </a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="1982-06-23">16 Augs, 1993</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address> 6 October, Giza, Egypt </address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.github.com/moh222salah" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/moh222salah" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/moh222salah" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.twitter.com/mo222salah" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+
+    <!-- #main-content-->
+    <div class="main-content">
+      <!-- #NAVBAR-->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+          </li>
+          </li>
+        </ul>
+      </nav>
+
+
+<!-- #ABOUT -->
+<article class="about active" data-page="about">
+    <h2 class="h2 article-title">About me</h2>
+  </header>
+
+  <section class="about-text">
+
+    <p>
+      I am an <strong>AI Designer & Digital Marketing Manager with 5 years of experience</strong>, 
+      specializing in <strong>AI-powered design solutions</strong>, <strong>strategic digital marketing</strong>, 
+      and <strong>SEO & analytics</strong>. My focus is on creating innovative, user-centered designs 
+      powered by artificial intelligence while building impactful marketing strategies 
+      that enhance brand presence and drive business growth.
+    </p>
+
+    <p>
+      Alongside my expertise in design and marketing, I am also a <strong>Full Stack Developer with 3 years of experience</strong>. 
+      I specialize in backend development with <strong>PHP (Laravel)</strong> and <strong>MySQL</strong>, 
+      and frontend development using <strong>HTML, CSS, JavaScript, and React</strong>. 
+      This unique blend of skills allows me to design, market, and develop integrated 
+      digital solutions from concept to execution.
+    </p>
+
+    <p>
+      My mission is to deliver digital experiences that are not only visually striking 
+      and engaging but also technically robust, optimized for growth, 
+      and aligned with business objectives.
+    </p>
+
+  </section>
+
+
+
+
+  <!-- service -->
+        <section class="service">
+          <h3 class="h3 service-title">What i'm doing</h3>
+           <ul class="service-list">
+
+            <li class="service-item">
+             <div class="service-icon-box">
+              <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+               </div>
+                <div class="service-content-box">
+                 <h4 class="h4 service-item-title"> AI Design Solutions </h4>
+                 <p class="service-item-text"> Crafting next-generation UI/UX experiences using Artificial Intelligence to generate adaptive designs, automate creative processes, and deliver highly personalized digital products that captivate users. </p>
+              </div>
+            </li>
+
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">  Digital Marketing Strategy </h4>
+                <p class="service-item-text"> Building data-driven marketing campaigns that strengthen brand awareness, drive customer engagement, and boost ROI across platforms including Google Ads, Meta, LinkedIn, and TikTok. </p>
+              </div>
+            </li>
+
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+              <h4 class="h4 service-item-title"> SEO & Analytics</h4>
+              <p class="service-item-text"> Enhancing search engine visibility through advanced SEO techniques,  keyword optimization, and continuous performance monitoring. Providing actionable insights to ensure sustainable business growth. </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+  <div class="service-icon-box">
+    <img src="./assets/images/icon-dev.svg" alt="Web design & development icon" width="40">
+  </div>
+  <div class="service-content-box">
+    <h4 class="h4 service-item-title">Web Design & Development</h4>
+    <p class="service-item-text">
+      Crafting modern, user-friendly, and responsive websites with a perfect balance of 
+      creative design and high-quality development. From stunning UI/UX layouts to 
+      robust backend functionality, delivering professional digital experiences. </p>
+          </div>
+          </li>
+          </ul>
+        </section>
+
+
+<hr> <hr>
+
+      <!--  #RESUME      -->
+        <section class="resume">
+        <h2 class="h2 article-title">Resume</h2>
+            <section class="timeline">
+             <div class="title-wrapper">
+             <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+             </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Google Digital Garage ( Master Certificate )  </h4>
+              <span> 2023 </span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Microsoft Advertising ( Master Certificate )  </h4>
+              <span> 2023 </span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Artificial Intelligence - AI Certificate  </h4>
+              <span> 2022 </span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Full Stack Developement ( Diploma Certificate )  </h4>
+              <span> 2020 </span>
+              <p class="timeline-text">              </p>
+            </li>
+            
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> English for Career Development Certificate  </h4>
+              <span> 2020 </span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Communication and Soft Skills Diploma </h4>
+              <span> 2019 </span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Business Etiquette Certificate </h4>
+              <span> 2019 </span>
+              <p class="timeline-text">             </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Full Stack Developement ( Diploma Certificate )  </h4>
+              <span> 2017 </span>
+              <p class="timeline-text">              </p>
+            </li>
+            
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Cairo University </h4>
+              <span> 2011 — 2015</span>
+              <p class="timeline-text">               </p>
+            </li>
+          </ol>
+        </section>
+
+        <hr> <hr>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Marketing Specialist </h4>
+              <span>2017 — Present</span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> UI/UX Designer </h4>
+              <span>2020 — Present</span>
+              <p class="timeline-text">              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title"> Full Stack Developer</h4>
+              <span>2023 — Present</span>
+              <p class="timeline-text">              </p>
+            </li>
+          </ol>
+        </section>
+
+        <hr> <hr>
+
+          <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5"> Marketing Skills</h5>
+                <data value="90">90 %</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5"> UI/UX Design Skills </h5>
+                <data value="80">80 %</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5"> Coding Skills </h5>
+                <data value="80">70 %</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+
+      <!-- #PORTFOLIO    -->
+        <section class=" portfolio ">
+        <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+        <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                    <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                </figure>
+                <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            
+            <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+                <time datetime="2021-06-14">14 June, 2021</time>
+                <div data-modal-text>
+                    <p>Mohamed was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+        <!-- AI DESIGN PROJECTS -->
+        <section class="portfolio-section">
+            <h2 class="section-title">AI Design Projects</h2>
+            <p class="section-subtitle">Innovative visual solutions powered by artificial intelligence and creative strategy</p>
+            
+            <div class="projects-grid">
+                <!-- Featured Project -->
+                <div class="project-card featured-project">
+                    <div class="featured-badge">Featured</div>
+                    
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Complete Brand Revolution</h3>
+                            <p class="project-category">AI-Powered Brand Identity</p>
+                        </div>
+                    </div>
+                                      
+                    <ul class="project-highlights">
+                        <li>Generated 50+ logo concepts using MidJourney and refined top 5</li>
+                        <li>Developed comprehensive brand guidelines with AI-assisted color psychology</li>
+                        <li>Created 200+ marketing assets across all touchpoints</li>
+                        <li>Implemented brand tracking system with 95% consistency score</li>
+                        <li>Achieved 200% increase in brand recognition within 6 months</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">MidJourney</span>
+                        <span class="tech-tag">Adobe Firefly</span>
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">Adobe Creative Suite</span>
+                        <span class="tech-tag">Brand Strategy</span>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="preview-item"><i class="fas fa-palette"></i></div>
+                        <div class="preview-item"><i class="fas fa-font"></i></div>
+                        <div class="preview-item"><i class="fas fa-shapes"></i></div>
+                        <div class="preview-item"><i class="fas fa-image"></i></div>
+                    </div>
+
+                    <div class="project-metrics">
+                        <h4 class="metrics-title">Project Impact</h4>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-value">200%</span>
+                                <span class="metric-label">Brand Recognition</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">6 weeks</span>
+                                <span class="metric-label">Delivery Time</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Consistency Score</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        <span>View Case Study</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media Mastery</h3>
+                            <p class="project-category">AI Content Generation</p>
+                        </div>
+                    </div>
+                  
+                    <div class="tech-stack">
+                        <span class="tech-tag">Stable Diffusion</span>
+                        <span class="tech-tag">Canva Pro</span>
+                        <span class="tech-tag">Buffer</span>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="preview-item"><i class="fab fa-instagram"></i></div>
+                        <div class="preview-item"><i class="fab fa-facebook"></i></div>
+                        <div class="preview-item"><i class="fab fa-linkedin"></i></div>
+                        <div class="preview-item"><i class="fab fa-tiktok"></i></div>
+                    </div>
+
+                    <div class="project-metrics">
+                        <h4 class="metrics-title">Performance Results</h4>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-value">300%</span>
+                                <span class="metric-label">Engagement Growth</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">500+</span>
+                                <span class="metric-label">Monthly Visuals</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">Time Saved</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        <span>Explore Project</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Video Campaign Series</h3>
+                            <p class="project-category">AI Motion Graphics</p>
+                        </div>
+                    </div>
+                                        
+                    <div class="tech-stack">
+                        <span class="tech-tag">Premiere Pro</span>
+                        <span class="tech-tag">Runway ML</span>
+                        <span class="tech-tag">After Effects</span>
+                      </div>
+
+                    <div class="project-preview">
+                        <div class="preview-item"><i class="fas fa-play"></i></div>
+                        <div class="preview-item"><i class="fas fa-film"></i></div>
+                        <div class="preview-item"><i class="fas fa-microphone"></i></div>
+                        <div class="preview-item"><i class="fas fa-closed-captioning"></i></div>
+                    </div>
+
+                    <div class="project-metrics">
+                        <h4 class="metrics-title">Campaign Results</h4>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-value">5M+</span>
+                                <span class="metric-label">Total Views</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">25</span>
+                                <span class="metric-label">Videos Created</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">85%</span>
+                                <span class="metric-label">Completion Rate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        <span>Watch Series</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIGITAL MARKETING PROJECTS -->
+        <section class="portfolio-section">
+            <h2 class="section-title">Digital Marketing Campaigns</h2>
+            <p class="section-subtitle">Data-driven strategies that leverage AI insights to maximize ROI and engagement</p>
+            
+            <div class="projects-grid">
+                <!-- Marketing Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Multi-Platform Ad Optimization</h3>
+                            <p class="project-category">Performance Marketing</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Google Ads</span>
+                        <span class="tech-tag">Facebook Ads Manager</span>
+                        <span class="tech-tag">LinkedIn Campaign Manager</span>
+                        <span class="tech-tag">TikTok Ads</span>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="preview-item"><i class="fab fa-google"></i></div>
+                        <div class="preview-item"><i class="fab fa-facebook"></i></div>
+                        <div class="preview-item"><i class="fab fa-linkedin"></i></div>
+                        <div class="preview-item"><i class="fab fa-tiktok"></i></div>
+                    </div>
+
+                    <div class="project-metrics">
+                        <h4 class="metrics-title">Campaign Performance</h4>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-value">400%</span>
+                                <span class="metric-label">ROAS</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">65%</span>
+                                <span class="metric-label">Lower CPA</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">250%</span>
+                                <span class="metric-label">Lead Growth</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <a href="#" class="project-link">
+                        <span>View Campaign</span>
+                        <i class="fas fa-chart-line"></i>
+                    </a>
+                </div>
+
+                <!-- Marketing Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>SEO Content Strategy</h3>
+                            <p class="project-category">Organic Growth</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Developed and executed comprehensive SEO strategy using AI content generation .
+                    </p>
+                    
+                    <ul class="project-highlights">
+                        <li>AI-powered keyword research and content gaps analysis</li>
+                        <li>150+ optimized blog posts and landing pages</li>
+                        <li>Technical SEO audit and implementation</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">SEMrush</span>
+                        <span class="tech-tag">Surfer SEO</span>
+                        <span class="tech-tag">Jasper AI</span>
+                        <span class="tech-tag">Google Search Console</span>
+                    </div>
+
+                    <div class="project-preview">
+                        <div class="preview-item"><i class="fas fa-search"></i></div>
+                        <div class="preview-item"><i class="fas fa-file-alt"></i></div>
+                        <div class="preview-item"><i class="fas fa-link"></i></div>
+                        <div class="preview-item"><i class="fas fa-chart-line"></i></div>
+                    </div>
+            </li>
+          </ul>
+        </section>
+
+<hr>
+
+
+
+
+        <!--  clients-->
+        <section class="clients">
+          <h3 class="h3 clients-title">Clients</h3>
+          <ul class="clients-list has-scrollbar">
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+          </ul>
+        </section>
+
+
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://moh222salah.github.io/startup/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/startup.png" alt="finance" loading="lazy">
+                </figure>
+                <h3 class="project-title"> Startup </h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://moh222salah.github.io/HomeRealestate/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/homerealestate.png" alt="orizon" loading="lazy">
+                </figure>
+                <h3 class="project-title">Home Realestate</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">            
+              <a href="https://moh222salah.github.io/GardenerLandscaping/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/gardenerlandscaping.png" alt="fundo" loading="lazy">
+                </figure>
+                <h3 class="project-title">Gradener Landscaping</h3>
+                <p class="project-category">Web design</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://moh222salah.github.io/AlQudsExpert/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/alquds.png" alt="brawlhalla" loading="lazy">
+                </figure>
+                <h3 class="project-title">Quds Marketing</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://moh222salah.github.io/QudsMarketingAgency/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/alqudsagency.png" alt="brawlhalla" loading="lazy">
+                </figure>
+                <h3 class="project-title">Quds Agency</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">            
+              <a href="https://moh222salah.github.io/elacademic/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/elacademic.png" alt="task manager" loading="lazy">
+                </figure>
+                <h3 class="project-title"> E-learn Academic </h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://moh222salah.github.io/M3lekStore/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/m3alekstore.png" alt="metaspark" loading="lazy">
+                </figure>
+                <h3 class="project-title">M3lek Store</h3>
+                <p class="project-category">Web design</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://moh222salah.github.io/ajyalacademy/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/ajyal.PNG" alt="summary" loading="lazy">
+                </figure>
+                <h3 class="project-title"> Ajyal Academy </h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://moh222salah.github.io/bitcopy/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/bitcopy.png" alt="dsm." loading="lazy">
+                </figure>
+                <h3 class="project-title"> Bitcopy</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://moh222salah.github.io/food/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/funday.png" alt="dsm." loading="lazy">
+                </figure>
+                <h3 class="project-title"> Fonday </h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://moh222salah.github.io/Egykhairtrade/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/egykhairtrade.png" alt="dsm." loading="lazy">
+                </figure>
+                <h3 class="project-title"> Egy Khair Trade </h3>
+                <p class="project-category">Applications</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://moh222salah.github.io/WeWebServices/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/weweb.png" alt="arrival" loading="lazy">
+                </figure>
+                <h3 class="project-title"> Web Services </h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      <!-- #BLOG-->
+        <section class="blog">
+          <h2 class="h2 article-title">Blog</h2>
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Fab 23, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Design conferences in 2025</h3>
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                   </figure>
+                    <div class="blog-content">
+                    <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">june 4, 2024</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+                    <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                 </figure>
+                  <div class="blog-content">
+                   <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">oct 13, 2023</time>
+                   </div>
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+                 <p class="blog-text">   Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit. </p>
+                </div>
+                </a>
+               </li>
+             <li class="blog-post-item">
+            <a href="#">
+          <figure class="blog-banner-box">
+            <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+              </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Sep 17, 2022</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+                  <p class="blog-text">  Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi. </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-02-23">Agus 22, 2022</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+              <div class="blog-content">
+            <div class="blog-meta">
+             <p class="blog-category">Design</p>
+                <span class="dot"></span>
+                 <time datetime="2022-02-23">Jane 2, 2021</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      <!-- #CONTACT -->
+        <section class="contact">
+          <h2 class="h2 article-title">Contact</h2>
+        <section class="mapbox" data-mapbox>
+          <figure>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174841.88147039936!2d31.10745818434902!3d29.964722195797734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145855e126df199d%3A0x24a6cf9d2fda5678!2z2YXYr9mK2YbYqSDZpiDYo9mD2KrZiNio2LHYjCDZhdit2KfZgdi42Kkg2KfZhNis2YrYstip!5e1!3m2!1sar!2seg!4v1749841750947!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+
+
+  <!-- custom js link -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const colors = [
+            'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+            'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+            'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+            'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+            'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
+            'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
+            'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
+            'linear-gradient(135deg, #ff8a80 0%, #ff80ab 100%)'
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackground() {
+            document.body.style.background = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        // تغيير الخلفية كل ثانية
+        setInterval(changeBackground, 1000);
+        
+        // تطبيق اللون الأول مباشرة
+        changeBackground();
+    </script>
+
+</body>
+
+</html>
